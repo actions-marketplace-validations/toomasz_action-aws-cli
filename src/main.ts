@@ -1,6 +1,5 @@
 
 
-import {addPath} from '@actions/core/lib/core'
 import {DownloadExtractInstall} from './toolHandler'
 import * as path from 'path'
 
@@ -34,8 +33,7 @@ export async function _installTool(): Promise<string>{
   await tool.installPackage(installFilePath, installArgs)
 
   const toolCachePath = await tool.cacheTool(installedBinary)
-  await addPath(toolCachePath)
-
+  echo "{toolCachePath}" >> $GITHUB_PATH
   return toolCachePath
 }
 
