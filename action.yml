@@ -1,6 +1,6 @@
-name: 'AWS cli install action'
+name: 'AWS cli install action - updated'
 description: 'Installs AWS CLI'
-author: 'chrislennon'
+author: 'toomasz'
 branding:
   icon: 'terminal'
   color: 'gray-dark'
